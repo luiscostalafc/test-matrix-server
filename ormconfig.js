@@ -7,9 +7,9 @@ const devConfig = [
     type: 'postgres',
     host: process.env.POSTGRES_HOST,
     port: 5432,
-    username: process.env.POSTGRES_USER,
-    password: process.env.POSTGRES_PASS,
-    database: process.env.POSTGRES_NAME,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     entities: [
       './src/modules/**/infra/typeorm/entities/*.ts'
     ],
@@ -25,7 +25,7 @@ const devConfig = [
     type: 'mongodb',
     host: process.env.MONGO_HOST,
     port: 27017,
-    database: process.env.MONGO_NAME,
+    database: process.env.MONGO_DB,
     useUnifiedTopology: true,
     entities: [
       './src/modules/**/infra/typeorm/schemas/*.ts'
@@ -39,9 +39,9 @@ const prodConfig = [
     type: 'postgres',
     host: process.env.POSTGRES_HOST,
     port: 5432,
-    username: process.env.POSTGRES_USER,
-    password: process.env.POSTGRES_PASS,
-    database: process.env.POSTGRES_NAME,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     entities: [
       './dist/modules/**/infra/typeorm/entities/*.js'
     ],
@@ -57,7 +57,7 @@ const prodConfig = [
     type: 'mongodb',
     host: process.env.MONGO_HOST,
     port: 27017,
-    database: process.env.MONGO_NAME,
+    database: process.env.MONGO_DB,
     useUnifiedTopology: true,
     entities: [
       './dist/modules/**/infra/typeorm/schemas/*.js'
